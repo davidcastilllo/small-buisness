@@ -1,14 +1,7 @@
-import { Login } from './components/Login'
+
 
 let App = () => {
-  return ( 
-  <>
-   <Login />
-    <div>
-     Hello!
-    </div>
-    </>
-  );
+  return (null);
 }
 
 export default App;
