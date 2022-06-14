@@ -1,0 +1,31 @@
+#username, #password {
+    border: 0px;
+    border-bottom: 1.5px solid #B6B6B6;
+    width: 500px;
+    margin: 12px 0;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 45px;
+}
+
+#login {
+    margin-top: 10px;
+    width: 500px;
+    border: 0;
+    font-weight: 500;
+    padding: 7px;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px #888888;
+}
+
+::placeholder {
+    color: #B6B6B6
+  }
