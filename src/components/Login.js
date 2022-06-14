@@ -6,7 +6,7 @@ export let Login = () => {
   <>
   <Header />
   <div>
-  Login Page!
+  
   </div>
   </>
  )

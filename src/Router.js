@@ -5,12 +5,10 @@ import { Details } from "./components/Details";
 import { Login } from "./components/Login";
 import { Admin } from "./components/Admin";
 import { NewListing } from "./components/NewListing";
-
-const checkAuth = () => false
+import { authenticated } from "./states/Globalstate";
 
 const ProtectedRoute = ({ children }) => {
- let authed = checkAuth()
- return authed ? children : <Navigate to="/" />;
+ return authenticated.get() ? children : <Navigate to="/" />;
 }
 
 let Router = () => {
