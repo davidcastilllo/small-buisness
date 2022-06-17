@@ -1,8 +1,7 @@
 import React from "react";
 import './Header.css'
 import { Link } from "react-router-dom";
-import { authenticated } from "../states/Globalstate";
-
+import { checkAuth } from "./CheckAuth"
 
 export let Header = () => {
 
@@ -10,6 +9,10 @@ export let Header = () => {
   textDecoration: "none",
   color: 'white'
 };
+
+let Hello = () => {
+  document.cookie = "loggedIn=true; max-age=0"
+}
 
  return (
   <>
@@ -20,19 +23,18 @@ export let Header = () => {
    <section className="right">
    <Link style={linkStyle} to="/listings">Listings</Link>
    {
-   authenticated.get() ?
+   checkAuth() ?
    <>
     <Link style={linkStyle} to="/newlisting">Add</Link>
-    <Link style={linkStyle} to="/">LOGOUT</Link> 
+    <Link style={linkStyle} to="/" onClick={Hello}>LOGOUT</Link>
    </>
-  
    : 
    <Link style={linkStyle} to="/">Login</Link>
    }
    </section>
   </div>
   {
-  authenticated.get() ?
+  checkAuth() ?
   <div className="userbar">
    Logged in as: username
   </div>

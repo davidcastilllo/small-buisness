@@ -3,12 +3,11 @@ import { Routes, Route, Navigate} from "react-router-dom";
 import { Listings } from "./components/Listings";
 import { Details } from "./components/Details";
 import { Login } from "./components/Login";
-import { Admin } from "./components/Admin";
 import { NewListing } from "./components/NewListing";
-import { authenticated } from "./states/Globalstate";
+import { checkAuth } from "./components/CheckAuth";
 
 const ProtectedRoute = ({ children }) => {
- return authenticated.get() ? children : <Navigate to="/" />;
+ return checkAuth() ? children : <Navigate to="/" />;
 }
 
 let Router = () => {
@@ -17,15 +16,7 @@ let Router = () => {
     <Routes>
       <Route path='/' element={<Login />} />
       <Route path='/listings' element={<Listings />} />
-      <Route path='/details' element={<Details />} />
-      <Route
-       path="/admin"
-       element={
-       <ProtectedRoute>
-       <Admin />
-       </ProtectedRoute>
-      }
-      />
+      <Route path='/details/:id' element={<Details />} />
       <Route
        path="/newlisting"
        element={

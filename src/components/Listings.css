@@ -1,0 +1,41 @@
+#centerDiv {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+}
+
+#bizTable {
+ margin: 60px 110px;
+ border-collapse: collapse;
+}
+
+.bizTitles {
+ padding: 0 0 20px 14px;
+ border-bottom: 1px solid #d2d2d2;
+}
+
+.bizHead {
+ font-family: sans-serif;
+ font-size: 13px;
+ font-weight: lighter;
+ color: #878383;
+ text-align: left;
+}
+
+.bizBody {
+ text-align: left;
+ font-family: sans-serif;
+ font-size: 13px;
+}
+
+.bizData {
+ border-bottom: 1px solid #d2d2d2;
+ padding: 20px 20px 20px 14px;
+ font-weight: 400;
+}
+
+#TrashImg {
+ width: 20px;
+ height: 20px;
+}

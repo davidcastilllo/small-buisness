@@ -1,28 +1,23 @@
 import React, { useEffect } from "react";
 import { Header } from "./Header";
 import './Login.css'
-import { authenticated, authenticated } from "../states/Globalstate";
-import { useState as hookState } from "@hookstate/core";
-
+import { checkAuth } from "./CheckAuth";
+import { Navigate } from "react-router-dom";
 
 export let Login = () => {
 
-    let auth = useState(authenticated)
-
-    console.log(auth.get())
-    
-    // let cookies = cookie.parse('loggedIn')
-    // console.log('before', cookies)
-
     let setCookies = () => {
-        console.log('You clicked me')
+     document.cookie = "loggedIn=true"
     }
 
  return (
   <>
   <Header />
-  <div id="form">
-  <form onSubmit={() => {setCookies()}}>
+  {
+   checkAuth() ? 
+  <Navigate to="/listings" />
+  : <div id="form">
+  <form onSubmit={setCookies}>
       <section>
         <label for="username"></label>
         <input type="text" id="username" placeholder="Username" required/>
@@ -36,6 +31,7 @@ export let Login = () => {
       </section>
   </form>
   </div>
+  }
   </>
  )
 }
