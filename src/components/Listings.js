@@ -9,7 +9,7 @@ import redTrash from './redTrash.png'
 export let Listings = () => {
 
   let bizList = useState(bizdata)
-
+ console.log(bizList.get())
   let deleteBiz = (id) => {
    let newBizData = JSON.parse(JSON.stringify(bizList.get()))
    newBizData.splice(id,1)

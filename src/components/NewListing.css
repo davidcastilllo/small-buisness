@@ -1,0 +1,33 @@
+#body {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ gap: 30px;
+ margin-top: 40px;
+}
+
+#googlemaps {
+ width: 650px;
+ height: 350px;
+}
+
+#name,#address,#hours,#description {
+    border: 0px;
+    border-bottom: 2px solid #B6B6B6;
+    width: 600px;
+    margin: 12px 0;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+#save {
+ margin-top: 10px;
+ width: 290px;
+ border: 0;
+ font-weight: 500;
+ padding: 9px;
+ background-color: #3F51B5;
+ color: white;
+ border-radius: 3px;
+ box-shadow: 1px 1px 5px 1px #888888;
+}

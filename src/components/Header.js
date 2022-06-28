@@ -10,7 +10,7 @@ export let Header = () => {
   color: 'white'
 };
 
-let Hello = () => {
+let logout = () => {
   document.cookie = "loggedIn=true; max-age=0"
 }
 
@@ -26,7 +26,7 @@ let Hello = () => {
    checkAuth() ?
    <>
     <Link style={linkStyle} to="/newlisting">Add</Link>
-    <Link style={linkStyle} to="/" onClick={Hello}>LOGOUT</Link>
+    <Link style={linkStyle} to="/" onClick={logout}>LOGOUT</Link>
    </>
    : 
    <Link style={linkStyle} to="/">Login</Link>

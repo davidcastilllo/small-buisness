@@ -1,4 +1,23 @@
-.map-container {
- height: 600px;
- width: 600px;
+#detailsMap {
+ height: 400px;
+ width: 525px;
+}
+
+#container {
+ display: flex;
+ justify-content: center;
+}
+
+#detailsBody {
+ display: flex;
+ flex-direction: column;
+ width: 525px;
+ gap: 15px;
+ margin-top: 28px;
+ font-family: sans-serif;
+ text-align: left;
+}
+
+.bizTitle,.bizAddress,.bizHours {
+ margin-bottom: 18px;
 }
